@@ -3,8 +3,14 @@ package br.crateus.kariri.petnatu;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
+
+    private EditText editTextLoginEntrar, editTextSenhaEntrar;
+    private Button entrarButtonEntrar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
