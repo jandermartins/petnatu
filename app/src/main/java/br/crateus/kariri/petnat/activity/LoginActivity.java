@@ -1,29 +1,72 @@
 package br.crateus.kariri.petnat.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import br.crateus.kariri.petnat.R;
 
 public class LoginActivity extends AppCompatActivity {
+
+    FirebaseAuth mAuth;
+    FirebaseUser mUser;
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Button btEntra = (Button) findViewById(R.id.buttonEntrar);
+        mAuth = FirebaseAuth.getInstance();
 
-        btEntra.setOnClickListener(new View.OnClickListener() {
+        EditText etEmail, etSenha;
+        Button btEntrar;
+
+        etEmail = (EditText) findViewById(R.id.etEmailEntrar);
+        etSenha = (EditText) findViewById(R.id.etSenhaEntrar);
+        btEntrar = (Button) findViewById(R.id.btEntrar);
+
+
+        btEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this, PaginaInicialActivity.class));
+                mAuth.signInWithEmailAndPassword(etEmail.getText().toString(), etSenha.getText().toString()).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            Log.d("ok", "signInWithEmail:success");
+                            mUser = mAuth.getCurrentUser();
+                            startActivity(new Intent(LoginActivity.this, PaginaInicialActivity.class));
+                        }else {
+                            mAuth.createUserWithEmailAndPassword(etEmail.getText().toString(), etSenha.getText().toString()).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    Log.i("user", "criado");
+                                    mUser = mAuth.getCurrentUser();
+                                    startActivity(new Intent(LoginActivity.this, CadastrarUsuarioActivity.class));
+                                }
+                            });
+                        }
+                    }
+                });
             }
         });
-
     }
 }

@@ -10,4 +10,5 @@ public class Pet {
     private String sexo;
     private Date nascimento;
     private boolean castrado;
+    private String foto;
 }

@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "344739538300",
+    "project_id": "pet-natu",
+    "storage_bucket": "pet-natu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:344739538300:android:cf6a9bd7c0e3a5e50070f9",
+        "android_client_info": {
+          "package_name": "br.crateus.kariri.petnat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "344739538300-8nb9l9hooamhcmk7p8lofkhlr71cfuaa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4CADfVnxbq9iLtCjP3prrSUJT-iMK9Zk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "344739538300-8nb9l9hooamhcmk7p8lofkhlr71cfuaa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:344739538300:android:bc68e67b64dea5700070f9",
+        "android_client_info": {
+          "package_name": "br.crateus.kariri.petnatu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "344739538300-8nb9l9hooamhcmk7p8lofkhlr71cfuaa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4CADfVnxbq9iLtCjP3prrSUJT-iMK9Zk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "344739538300-8nb9l9hooamhcmk7p8lofkhlr71cfuaa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -7,7 +7,7 @@
     tools:context=".activity.LoginActivity">
 
     <Button
-        android:id="@+id/buttonEntrar"
+        android:id="@+id/btEntrar"
         android:layout_width="wrap_content"
         android:layout_height="61dp"
         android:text="Entrar"
@@ -44,7 +44,7 @@
         app:layout_constraintVertical_bias="0.364" />
 
     <EditText
-        android:id="@+id/etLoginEntrar"
+        android:id="@+id/etEmailEntrar"
         android:layout_width="273dp"
         android:layout_height="61dp"
         android:ems="10"
