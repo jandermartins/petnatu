@@ -1,4 +1,4 @@
-package br.crateus.kariri.petnatu;
+package br.crateus.kariri.petnat;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("br.crateus.kariri.petnatu", appContext.getPackageName());
+        assertEquals("br.crateus.kariri.petnat", appContext.getPackageName());
     }
 }

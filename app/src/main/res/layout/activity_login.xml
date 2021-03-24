@@ -4,36 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <EditText
-        android:id="@+id/editTextLoginEntrar"
-        android:layout_width="273dp"
-        android:layout_height="61dp"
-        android:ems="10"
-        android:hint="Login"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.616" />
-
-    <EditText
-        android:id="@+id/editTextLoginEntrar"
-        android:layout_width="273dp"
-        android:layout_height="61dp"
-        android:ems="10"
-        android:hint="Senha"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.48" />
+    tools:context=".activity.LoginActivity">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonEntrar"
         android:layout_width="wrap_content"
         android:layout_height="61dp"
         android:text="Entrar"
@@ -42,7 +16,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.807" />
+        app:layout_constraintVertical_bias="0.828" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -61,11 +35,39 @@
         android:id="@+id/textView"
         android:layout_width="273dp"
         android:layout_height="61dp"
-        android:text="Entrar no PetNatú"
+        android:text="Entrar na PetNatú"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.364" />
+
+    <EditText
+        android:id="@+id/etLoginEntrar"
+        android:layout_width="273dp"
+        android:layout_height="61dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textWebEmailAddress|textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.517" />
+
+    <EditText
+        android:id="@+id/etSenhaEntrar"
+        android:layout_width="273dp"
+        android:layout_height="61dp"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="textPersonName|textPassword"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.653" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

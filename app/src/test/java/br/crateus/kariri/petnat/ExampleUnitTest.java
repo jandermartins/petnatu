@@ -1,4 +1,4 @@
-package br.crateus.kariri.petnatu;
+package br.crateus.kariri.petnat;
 
 import org.junit.Test;
 

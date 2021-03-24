@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "br.crateus.kariri.petnatu"
+        applicationId "br.crateus.kariri.petnat"
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
