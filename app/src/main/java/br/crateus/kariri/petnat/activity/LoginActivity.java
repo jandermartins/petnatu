@@ -19,10 +19,8 @@ import com.google.firebase.auth.FirebaseUser;
 import br.crateus.kariri.petnat.R;
 
 public class LoginActivity extends AppCompatActivity {
-
     FirebaseAuth mAuth;
     FirebaseUser mUser;
-
 
     @Override
     protected void onStart() {
@@ -42,7 +40,6 @@ public class LoginActivity extends AppCompatActivity {
         etEmail = (EditText) findViewById(R.id.etEmailEntrar);
         etSenha = (EditText) findViewById(R.id.etSenhaEntrar);
         btEntrar = (Button) findViewById(R.id.btEntrar);
-
 
         btEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
