@@ -24,6 +24,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onStart() {
+        VerificaLogado();
         super.onStart();
     }
 
@@ -40,6 +41,8 @@ public class LoginActivity extends AppCompatActivity {
         etEmail = (EditText) findViewById(R.id.etEmailEntrar);
         etSenha = (EditText) findViewById(R.id.etSenhaEntrar);
         btEntrar = (Button) findViewById(R.id.btEntrar);
+
+
 
         btEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,5 +68,12 @@ public class LoginActivity extends AppCompatActivity {
                 });
             }
         });
+    }
+
+    private void VerificaLogado() {
+        mUser = mAuth.getCurrentUser();
+        if(mUser != null){
+            startActivity(new Intent(LoginActivity.this, PaginaInicialActivity.class));
+        }
     }
 }

@@ -16,7 +16,17 @@ public class PainelAdmActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_painel_adm);
 
-        Button btCadastrarPet = (Button) findViewById(R.id.btCadastrarPetPA);
+        Button btCadastrarPet, btVerCadastro;
+
+        btCadastrarPet = (Button) findViewById(R.id.btCadastrarPetPA);
+        btVerCadastro = (Button) findViewById(R.id.btVerCadastroPa);
+
+        btVerCadastro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(PainelAdmActivity.this, VerCadastroActivity.class));
+            }
+        });
 
         btCadastrarPet.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -24,5 +34,6 @@ public class PainelAdmActivity extends AppCompatActivity {
                 startActivity(new Intent(PainelAdmActivity.this, CadastrarPetActivity.class));
             }
         });
+
     }
 }

@@ -9,6 +9,7 @@ public class Veterinario {
     private String cpf;
     private String especialidade;
 
+
     public Veterinario(){
 
     }

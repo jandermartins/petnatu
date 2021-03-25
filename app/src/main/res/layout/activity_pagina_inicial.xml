@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".activity.PaginaInicialActivity">
 
+    <Button
+        android:id="@+id/btSair"
+        android:layout_width="241dp"
+        android:layout_height="75dp"
+        android:text="Sair"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.905" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="256dp"
@@ -28,7 +39,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.846" />
+        app:layout_constraintVertical_bias="0.768" />
 
     <ImageView
         android:id="@+id/imageView2"
