@@ -29,6 +29,7 @@ public class PaginaInicialActivity extends AppCompatActivity {
 
         Button btPainelAdmPI = (Button) findViewById(R.id.btPainelAdmPI);
         Button btSair = (Button) findViewById(R.id.btSair);
+        Button btCadastrarTutor = (Button) findViewById(R.id.btCadastrarTutoPi);
 
         btPainelAdmPI.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +43,13 @@ public class PaginaInicialActivity extends AppCompatActivity {
             public void onClick(View v) {
                 mAuth.signOut();
                 startActivity(new Intent(PaginaInicialActivity.this, LoginActivity.class));
+            }
+        });
+
+        btCadastrarTutor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(PaginaInicialActivity.this, CadastrarTutorActivity.class));
             }
         });
 
