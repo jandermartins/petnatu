@@ -48,7 +48,7 @@ public class CadastrarTutorActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Tutor tutor = new Tutor(etCpf.getText().toString(), etNome.getText().toString(),
                         etEndereco.getText().toString(), etTelefone.getText().toString());
-                myRef.child("usuario").child(mUser.getUid()).child("tutores").setValue(tutor);
+                myRef.child("usuario").child(mUser.getUid()).child("tutores").child(etCpf.getText().toString()).setValue(tutor);
                 startActivity(new Intent(CadastrarTutorActivity.this, PainelAdmActivity.class));
             }
         });

@@ -21,22 +21,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.071" />
 
-    <EditText
-        android:id="@+id/etNomeCadastro"
-        android:layout_width="310dp"
-        android:layout_height="55dp"
-        android:ems="10"
-        android:hint="Nome"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.183" />
 
     <EditText
-        android:id="@+id/etEspecieCadastro"
+        android:id="@+id/etEspecieCadastroPet"
         android:layout_width="310dp"
         android:layout_height="55dp"
         android:ems="10"
@@ -47,10 +34,38 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.264" />
+        app:layout_constraintVertical_bias="0.352" />
 
     <EditText
-        android:id="@+id/etRacaCadastro"
+        android:id="@+id/etNomeCadastroPet"
+        android:layout_width="310dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.27" />
+
+    <EditText
+        android:id="@+id/etCpfTutorCadastroPet"
+        android:layout_width="310dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:hint="CPF Tutor"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.189" />
+
+    <EditText
+        android:id="@+id/etRacaCadastroPet"
         android:layout_width="310dp"
         android:layout_height="55dp"
         android:ems="10"
@@ -61,10 +76,10 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.346" />
+        app:layout_constraintVertical_bias="0.433" />
 
     <EditText
-        android:id="@+id/etPesoCadastro"
+        android:id="@+id/etPesoCadastroPet"
         android:layout_width="310dp"
         android:layout_height="55dp"
         android:ems="10"
@@ -75,11 +90,10 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.427" />
-
+        app:layout_constraintVertical_bias="0.514" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinnerCadastroSexoPet"
         android:layout_width="310dp"
         android:layout_height="55dp"
         android:addStatesFromChildren="false"
@@ -91,31 +105,7 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.522" />
-
-    <RadioGroup
-        android:layout_width="108dp"
-        android:layout_height="55dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.759"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.703">
-
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="match_parent"
-            android:layout_height="37dp"
-            android:text="Sim" />
-
-        <RadioButton
-            android:id="@+id/radioButton3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Não" />
-
-    </RadioGroup>
+        app:layout_constraintVertical_bias="0.609" />
 
     <TextView
         android:id="@+id/textView4"
@@ -125,27 +115,27 @@
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.289"
+        app:layout_constraintHorizontal_bias="0.269"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.718" />
+        app:layout_constraintVertical_bias="0.815" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/etDataCadastroPet"
         android:layout_width="310dp"
         android:layout_height="55dp"
         android:ems="10"
-        android:hint="Data de Nascimento"
+        android:hint="Data de Nascimento dd/MM/aaaa"
         android:inputType="date"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59" />
+        app:layout_constraintVertical_bias="0.677" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btCadastrarPet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ok"
@@ -154,7 +144,32 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.875" />
+        app:layout_constraintVertical_bias="0.961" />
+
+    <RadioGroup
+        android:id="@+id/rgCadastroPet"
+        android:layout_width="116dp"
+        android:layout_height="105dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.684"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.846">
+
+        <RadioButton
+            android:id="@+id/rbSim"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="Sim" />
+
+        <RadioButton
+            android:id="@+id/rbNao"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginBottom="13dp"
+            android:text="Não" />
+    </RadioGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

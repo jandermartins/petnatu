@@ -7,6 +7,18 @@
     tools:context=".activity.PainelAdmActivity">
 
     <Button
+        android:id="@+id/btCadastrarTutoPi"
+        android:layout_width="218dp"
+        android:layout_height="52dp"
+        android:text="Cadastrar Tutor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.575" />
+
+    <Button
         android:id="@+id/btCadastrarPetPA"
         android:layout_width="218dp"
         android:layout_height="52dp"
@@ -16,19 +28,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.602" />
-
-    <Button
-        android:id="@+id/btVerCadastroPa"
-        android:layout_width="218dp"
-        android:layout_height="52dp"
-        android:text="Ver Cadastro"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.849" />
+        app:layout_constraintVertical_bias="0.653" />
 
     <Button
         android:id="@+id/btVerPetPA"
