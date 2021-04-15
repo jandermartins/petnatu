@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PetNatú">
+        <activity android:name=".activity.VerPetsCadastradoActivity"></activity>
         <activity
             android:name=".activity.SpinnerActivity"
             android:label="@string/title_activity_spinner"
-            android:theme="@style/Theme.PetNatú.NoActionBar"></activity>
+            android:theme="@style/Theme.PetNatú.NoActionBar" />
         <activity android:name=".activity.CadastrarTutorActivity" />
         <activity android:name=".activity.VerCadastroActivity" />
         <activity android:name=".activity.CadastrarUsuarioActivity" />

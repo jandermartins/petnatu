@@ -3,6 +3,7 @@ package br.crateus.kariri.petnat.model;
 import java.util.Date;
 
 public class Pet {
+    private String idVeterinario;
     private String cpfTutor;
     private String nome;
     private String especie;
@@ -17,7 +18,16 @@ public class Pet {
 
     }
 
-    public Pet(String cpfTutor, String nome, String especie, String raca, String peso, String nascimento) {
+    public String getIdVeterinario() {
+        return idVeterinario;
+    }
+
+    public void setIdVeterinario(String idVeterinario) {
+        this.idVeterinario = idVeterinario;
+    }
+
+    public Pet(String idVeterinario, String cpfTutor, String nome, String especie, String raca, String peso, String nascimento) {
+        this.idVeterinario = idVeterinario;
         this.cpfTutor = cpfTutor;
         this.nome = nome;
         this.especie = especie;

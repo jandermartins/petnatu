@@ -19,8 +19,15 @@ public class PainelAdmActivity extends AppCompatActivity {
         Button btCadastrarPet, btVerCadastro, btCadastraTutor;
 
         btCadastrarPet = (Button) findViewById(R.id.btCadastrarPetPA);
-        btVerCadastro = (Button) findViewById(R.id.btVerCadastroPa);
+        btVerCadastro = (Button) findViewById(R.id.btVerPetPA);
         btCadastraTutor = (Button) findViewById(R.id.btCadastrarTutoPi);
+
+        btVerCadastro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(PainelAdmActivity.this, VerPetsCadastradoActivity.class));
+            }
+        });
 
         btCadastrarPet.setOnClickListener(new View.OnClickListener() {
             @Override

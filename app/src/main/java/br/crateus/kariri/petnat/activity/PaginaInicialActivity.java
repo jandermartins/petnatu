@@ -29,6 +29,14 @@ public class PaginaInicialActivity extends AppCompatActivity {
 
         Button btPainelAdmPI = (Button) findViewById(R.id.btPainelAdmPI);
         Button btSair = (Button) findViewById(R.id.btSair);
+        Button btDados = (Button) findViewById(R.id.btVerCadastroPa);
+
+        btDados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(PaginaInicialActivity.this, VerCadastroActivity.class));
+            }
+        });
 
 
         btPainelAdmPI.setOnClickListener(new View.OnClickListener() {
@@ -45,10 +53,8 @@ public class PaginaInicialActivity extends AppCompatActivity {
                 startActivity(new Intent(PaginaInicialActivity.this, LoginActivity.class));
             }
         });
-
-
-
     }
+
     private void VerificaLogado() {
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();

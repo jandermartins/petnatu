@@ -11,10 +11,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import br.crateus.kariri.petnat.R;
 import br.crateus.kariri.petnat.model.Veterinario;
@@ -29,7 +27,7 @@ public class VerCadastroActivity extends AppCompatActivity {
         TextView tvNome, tvCpf, tvCrmv, tvEspecialidade;
 
         tvNome = (TextView) findViewById(R.id.tvNomeMd);
-        tvCpf = (TextView) findViewById(R.id.tvCpf);
+        tvCpf = (TextView) findViewById(R.id.tvCpfMd);
         tvCrmv = (TextView) findViewById(R.id.tvCrmvMd);
         tvEspecialidade = (TextView) findViewById(R.id.tvEspecialidadeMd);
 

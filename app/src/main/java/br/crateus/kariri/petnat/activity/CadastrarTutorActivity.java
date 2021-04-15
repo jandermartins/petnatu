@@ -46,9 +46,9 @@ public class CadastrarTutorActivity extends AppCompatActivity {
         btCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Tutor tutor = new Tutor(etCpf.getText().toString(), etNome.getText().toString(),
+                Tutor tutor = new Tutor(mUser.getUid(), etCpf.getText().toString(), etNome.getText().toString(),
                         etEndereco.getText().toString(), etTelefone.getText().toString());
-                myRef.child("usuario").child(mUser.getUid()).child("tutores").child(etCpf.getText().toString()).setValue(tutor);
+                myRef.child("tutores").child(etCpf.getText().toString()).setValue(tutor);
                 startActivity(new Intent(CadastrarTutorActivity.this, PainelAdmActivity.class));
             }
         });

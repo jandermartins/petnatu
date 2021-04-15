@@ -5,6 +5,7 @@ import java.util.List;
 import br.crateus.kariri.petnat.activity.Endereco;
 
 public class Tutor {
+    private String idVeterinario;
     private String cpf;
     private String nome;
     private String endereco;
@@ -15,11 +16,20 @@ public class Tutor {
 
     }
 
-    public Tutor(String cpf, String nome, String endereco, String telefone) {
+    public Tutor(String idVeterinario, String cpf, String nome, String endereco, String telefone) {
+        this.idVeterinario = idVeterinario;
         this.cpf = cpf;
         this.nome = nome;
         this.endereco = endereco;
         this.telefone = telefone;
+    }
+
+    public String getIdVeterinario() {
+        return idVeterinario;
+    }
+
+    public void setIdVeterinario(String idVeterinario) {
+        this.idVeterinario = idVeterinario;
     }
 
     public String getCpf() {

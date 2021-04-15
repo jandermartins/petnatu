@@ -23,7 +23,7 @@ import br.crateus.kariri.petnat.model.Pet;
 public class CadastrarPetActivity extends AppCompatActivity {
 
     EditText etCpfTutor, etNomeCadastro, etEspecie, etRaca, etPeso, etDataNascimento;
-    Button btCadastrar;
+
     Spinner spSexo;
     RadioGroup rgCastrado;
 
@@ -47,7 +47,7 @@ public class CadastrarPetActivity extends AppCompatActivity {
         spSexo = (Spinner) findViewById(R.id.spinnerCadastroSexoPet);
         rgCastrado = (RadioGroup) findViewById(R.id.rgCadastroPet);
 
-        btCadastrar = (Button) findViewById(R.id.btCadastrarPet);
+        Button btCadastrar = (Button) findViewById(R.id.btCadastrarPet);
 
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
@@ -55,10 +55,10 @@ public class CadastrarPetActivity extends AppCompatActivity {
         btCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Pet pet = new Pet(etCpfTutor.getText().toString(), etNomeCadastro.getText().toString(), etEspecie.getText().toString(),
+                Pet pet = new Pet(mUser.getUid(), etCpfTutor.getText().toString(), etNomeCadastro.getText().toString(), etEspecie.getText().toString(),
                         etRaca.getText().toString(), etPeso.getText().toString(), etDataNascimento.getText().toString());
-                myRef.child("usuario").child(mUser.getUid()).child("tutores").child
-                        (etCpfTutor.getText().toString()).child("pets").setValue(pet);
+                myRef.child("tutores").child(etCpfTutor.getText().toString()).
+                        child(String.valueOf(pet.hashCode())).setValue(pet);
                 Toast.makeText(CadastrarPetActivity.this, "Pet Cadastrado com sucesso!!!", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(CadastrarPetActivity.this, PainelAdmActivity.class));
             }
