@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
@@ -57,6 +56,7 @@ public class CadastrarPetActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Pet pet = new Pet(mUser.getUid(), etCpfTutor.getText().toString(), etNomeCadastro.getText().toString(), etEspecie.getText().toString(),
                         etRaca.getText().toString(), etPeso.getText().toString(), etDataNascimento.getText().toString());
+                pet.setIdPet(String.valueOf(pet.hashCode()));
                 myRef.child("tutores").child(etCpfTutor.getText().toString()).
                         child(String.valueOf(pet.hashCode())).setValue(pet);
                 Toast.makeText(CadastrarPetActivity.this, "Pet Cadastrado com sucesso!!!", Toast.LENGTH_SHORT).show();

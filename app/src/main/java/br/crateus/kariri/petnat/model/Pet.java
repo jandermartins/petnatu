@@ -3,6 +3,16 @@ package br.crateus.kariri.petnat.model;
 import java.util.Date;
 
 public class Pet {
+    private String idPet;
+
+    public String getIdPet() {
+        return idPet;
+    }
+
+    public void setIdPet(String idPet) {
+        this.idPet = idPet;
+    }
+
     private String idVeterinario;
     private String cpfTutor;
     private String nome;
