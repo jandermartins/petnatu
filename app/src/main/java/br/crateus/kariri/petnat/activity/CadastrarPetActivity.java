@@ -57,8 +57,7 @@ public class CadastrarPetActivity extends AppCompatActivity {
                 Pet pet = new Pet(mUser.getUid(), etCpfTutor.getText().toString(), etNomeCadastro.getText().toString(), etEspecie.getText().toString(),
                         etRaca.getText().toString(), etPeso.getText().toString(), etDataNascimento.getText().toString());
                 pet.setIdPet(String.valueOf(pet.hashCode()));
-                myRef.child("tutores").child(etCpfTutor.getText().toString()).
-                        child(String.valueOf(pet.hashCode())).setValue(pet);
+                myRef.child("pets").child(String.valueOf(pet.hashCode())).setValue(pet);
                 Toast.makeText(CadastrarPetActivity.this, "Pet Cadastrado com sucesso!!!", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(CadastrarPetActivity.this, PainelAdmActivity.class));
             }

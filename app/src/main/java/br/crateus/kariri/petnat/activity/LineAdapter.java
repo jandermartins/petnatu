@@ -26,7 +26,8 @@ public class LineAdapter extends RecyclerView.Adapter<LineHolder> {
     @NonNull
     @Override
     public LineHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new LineHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.custonrecyclerpets, parent, false));
+        return new LineHolder(LayoutInflater.from(parent.getContext()).inflate
+                (R.layout.custonrecyclerpets, parent, false));
     }
 
     @Override
@@ -42,9 +43,14 @@ public class LineAdapter extends RecyclerView.Adapter<LineHolder> {
         });
     }
 
+    public void inserirItem(Pet pet){
+        mPets.add(pet);
+        notifyItemInserted(getItemCount());
+    }
+
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mPets != null ? mPets.size() : 0;
     }
 }
