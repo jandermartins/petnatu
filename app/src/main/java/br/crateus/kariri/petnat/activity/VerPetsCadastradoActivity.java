@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -46,7 +47,7 @@ public class VerPetsCadastradoActivity extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
         rvPets.setLayoutManager(layoutManager);
-        lineAdapter = new LineAdapter(new ArrayList(0));
+        lineAdapter = new LineAdapter(new ArrayList(0), VerPetsCadastradoActivity.this);
         rvPets.setAdapter(lineAdapter);
 
         mAuth = FirebaseAuth.getInstance();
@@ -73,14 +74,5 @@ public class VerPetsCadastradoActivity extends AppCompatActivity {
 
             }
         });
-
-        Button btMore = (Button) findViewById(R.id.btMaisPet);
-
-//        btMore.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(VerPetsCadastradoActivity.this, VerPetActivity.class));
-//            }
-//        });
     }
 }
