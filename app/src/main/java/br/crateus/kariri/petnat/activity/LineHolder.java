@@ -15,7 +15,7 @@ import br.crateus.kariri.petnat.R;
 
 public class LineHolder extends RecyclerView.ViewHolder {
 
-    public TextView idPet, nomePet;
+    public TextView nomePet;
     public Button btMore;
 
     public LineHolder(@NonNull View itemView) {

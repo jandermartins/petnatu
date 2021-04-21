@@ -2,6 +2,7 @@ package br.crateus.kariri.petnat.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -31,7 +32,7 @@ import br.crateus.kariri.petnat.model.Pet;
 
 public class VerPetsCadastradoActivity extends AppCompatActivity {
 
-    RecyclerView rvPets;
+
     LineAdapter lineAdapter;
     FirebaseDatabase mDatabase;
     FirebaseAuth mAuth;
@@ -43,11 +44,11 @@ public class VerPetsCadastradoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_pets_cadastrado);
 
-        rvPets = (RecyclerView) findViewById(R.id.RvVerPetsCadastrados);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        RecyclerView rvPets = (RecyclerView) findViewById(R.id.RvVerPetsCadastrados);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(VerPetsCadastradoActivity.this);
 
         rvPets.setLayoutManager(layoutManager);
-        lineAdapter = new LineAdapter(new ArrayList(0), VerPetsCadastradoActivity.this);
+        lineAdapter = new LineAdapter(new ArrayList(0));
         rvPets.setAdapter(lineAdapter);
 
         mAuth = FirebaseAuth.getInstance();
@@ -60,8 +61,9 @@ public class VerPetsCadastradoActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot pets : snapshot.getChildren()) {
-                    final Pet pet = new Pet();
 
+                    Log.i("dados", snapshot.getChildren().toString());
+                    Pet pet = new Pet();
                     pet.setIdPet(pets.getValue(Pet.class).getIdPet());
                     pet.setNome(pets.getValue(Pet.class).getNome());
 

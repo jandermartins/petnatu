@@ -2,6 +2,7 @@ package br.crateus.kariri.petnat.activity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,12 +21,9 @@ import br.crateus.kariri.petnat.model.Pet;
 public class LineAdapter extends RecyclerView.Adapter<LineHolder> {
 
     private final List<Pet> mPets;
-    private Context context;
 
-
-    public LineAdapter(ArrayList pets, Context context) {
-        mPets = pets;
-        this.context = context;
+    public LineAdapter(ArrayList pets) {
+           mPets = pets;
     }
 
     @NonNull
@@ -65,6 +63,7 @@ public class LineAdapter extends RecyclerView.Adapter<LineHolder> {
 
     public void inserirItem(Pet pet){
         mPets.add(pet);
+        Log.i("pet", pet.getNome());
         notifyItemInserted(getItemCount());
     }
 
