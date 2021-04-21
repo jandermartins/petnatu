@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 
 import androidx.annotation.NonNull;
@@ -38,7 +39,6 @@ public class VerPetsCadastradoActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseUser mUser;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,23 +57,22 @@ public class VerPetsCadastradoActivity extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance("https://pet-natu-default-rtdb.firebaseio.com/");
         DatabaseReference myref = mDatabase.getReference();
 
+
         myref.child("pets").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot pets : snapshot.getChildren()) {
-
-                    Log.i("dados", snapshot.getChildren().toString());
-                    Pet pet = new Pet();
-                    pet.setIdPet(pets.getValue(Pet.class).getIdPet());
-                    pet.setNome(pets.getValue(Pet.class).getNome());
-
-                    lineAdapter.inserirItem(pet);
+                        Log.i("dados", snapshot.getChildren().toString());
+                        Pet pet = new Pet();
+                        pet.setIdPet(pets.getValue(Pet.class).getIdPet());
+                        pet.setNome(pets.getValue(Pet.class).getNome());
+                        lineAdapter.inserirItem(pet);
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                Toast.makeText(VerPetsCadastradoActivity.this, "Não foi possivel carregar a lista de Pets", Toast.LENGTH_SHORT).show();
             }
         });
     }
