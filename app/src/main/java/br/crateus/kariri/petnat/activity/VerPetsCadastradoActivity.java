@@ -66,6 +66,12 @@ public class VerPetsCadastradoActivity extends AppCompatActivity {
                         Pet pet = new Pet();
                         pet.setIdPet(pets.getValue(Pet.class).getIdPet());
                         pet.setNome(pets.getValue(Pet.class).getNome());
+                        pet.setCpfTutor(pets.getValue(Pet.class).getCpfTutor());
+                        pet.setEspecie(pets.getValue(Pet.class).getEspecie());
+                        pet.setRaca(pets.getValue(Pet.class).getRaca());
+                        pet.setPeso(pets.getValue(Pet.class).getPeso());
+                        pet.setNascimento(pets.getValue(Pet.class).getNascimento());
+                        pet.setSexo(pets.getValue(Pet.class).getSexo());
                         lineAdapter.inserirItem(pet);
                 }
             }

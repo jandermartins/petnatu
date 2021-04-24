@@ -49,8 +49,8 @@ public class LineAdapter extends RecyclerView.Adapter<LineHolder> {
 
     private void abrirPet(View v, int position) {
         Intent i = new Intent(v.getContext(), VerPetActivity.class);
-
         i.putExtra("idPet", mPets.get(position).getIdPet());
+        //Log.i("Teste", mPets.get(position).getCpfTutor());
         i.putExtra("nomePet", mPets.get(position).getNome());
         i.putExtra("cpfTutor", mPets.get(position).getCpfTutor());
         i.putExtra("idVeterinario", mPets.get(position).getIdVeterinario());
@@ -59,7 +59,6 @@ public class LineAdapter extends RecyclerView.Adapter<LineHolder> {
         i.putExtra("peso", mPets.get(position).getPeso());
         i.putExtra("sexo", mPets.get(position).getSexo());
         i.putExtra("nascimento", mPets.get(position).getNascimento());
-
         v.getContext().startActivity(i);
     }
 

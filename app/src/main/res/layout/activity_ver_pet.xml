@@ -10,9 +10,9 @@
         android:id="@+id/textView18"
         android:layout_width="88dp"
         android:layout_height="23dp"
-        android:text="Peso"
+        android:text="Sexo"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/etNascimentoPetView"
+        app:layout_constraintEnd_toStartOf="@+id/etSexoPetVIew"
         app:layout_constraintHorizontal_bias="0.615"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,18 +20,15 @@
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="228dp"
-        android:layout_height="0dp"
+        android:layout_width="231dp"
+        android:layout_height="45dp"
         android:layout_marginTop="49dp"
-        android:layout_marginBottom="467dp"
         android:text="Dados do Pet"
         app:autoSizeTextType="uniform"
-        app:layout_constraintBottom_toTopOf="@+id/btSalvarPetView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.073" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etNomePetView"
@@ -98,7 +95,7 @@
         app:layout_constraintVertical_bias="0.589" />
 
     <EditText
-        android:id="@+id/etNascimentoPetView"
+        android:id="@+id/etSexoPetVIew"
         android:layout_width="227dp"
         android:layout_height="47dp"
         android:ems="10"
@@ -109,6 +106,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.687" />
+
+    <EditText
+        android:id="@+id/etNascimentoPetView"
+        android:layout_width="227dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.777" />
 
     <TextView
         android:id="@+id/textView13"
@@ -169,14 +179,27 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.584" />
 
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="79dp"
+        android:layout_height="17dp"
+        android:text="Nascimento"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/etNascimentoPetView"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.768" />
+
     <Button
-        android:id="@+id/btSalvarPetView"
+        android:id="@+id/btEditarPet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="104dp"
         android:text="Salvar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.912" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

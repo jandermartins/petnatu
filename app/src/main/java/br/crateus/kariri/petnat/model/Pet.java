@@ -1,9 +1,13 @@
 package br.crateus.kariri.petnat.model;
 
+import android.text.Editable;
+
 import java.util.Date;
 
 public class Pet {
     private String idPet;
+
+
 
     public String getIdPet() {
         return idPet;
