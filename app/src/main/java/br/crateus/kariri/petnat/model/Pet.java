@@ -7,10 +7,12 @@ import java.util.Date;
 public class Pet {
     private String idPet;
 
-
-
     public String getIdPet() {
         return idPet;
+    }
+
+    public Pet(){
+
     }
 
     public void setIdPet(String idPet) {
@@ -26,9 +28,17 @@ public class Pet {
     private String sexo;
     private String nascimento;
     private boolean castrado;
-    private String foto;
+    private String exame;
 
-    public Pet() {
+    public String getExame() {
+        return exame;
+    }
+
+    public void setExame(String exame) {
+        this.exame = exame;
+    }
+
+    public Pet(String uid, String s, String toString, String string, String s1, String toString1, String string1, String link) {
 
     }
 
@@ -40,14 +50,18 @@ public class Pet {
         this.idVeterinario = idVeterinario;
     }
 
-    public Pet(String idVeterinario, String cpfTutor, String nome, String especie, String raca, String peso, String nascimento) {
+    public Pet(String idPet, String idVeterinario, String cpfTutor, String nome, String especie, String raca, String peso, String sexo, String nascimento, String exame) {
+        this.idPet = idPet;
         this.idVeterinario = idVeterinario;
         this.cpfTutor = cpfTutor;
         this.nome = nome;
         this.especie = especie;
         this.raca = raca;
         this.peso = peso;
+        this.sexo = sexo;
         this.nascimento = nascimento;
+        this.castrado = castrado;
+        this.exame = exame;
     }
 
     public String getCpfTutor() {
@@ -112,13 +126,5 @@ public class Pet {
 
     public void setCastrado(boolean castrado) {
         this.castrado = castrado;
-    }
-
-    public String getFoto() {
-        return foto;
-    }
-
-    public void setFoto(String foto) {
-        this.foto = foto;
     }
 }

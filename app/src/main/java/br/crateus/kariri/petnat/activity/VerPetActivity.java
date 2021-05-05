@@ -51,15 +51,15 @@ public class VerPetActivity extends AppCompatActivity {
         raca.setText(getIntent().getExtras().getString("raca"));
         sexo.setText(getIntent().getExtras().getString("sexo"));
 
-        editar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Pet petEdit = new Pet(mUser.getUid(), nomeTutor.getText().toString(), nome.getText().toString(), especie.getText().toString(), raca.getText().toString()
-                        , peso.getText().toString(), nascimento.getText().toString());
-                petEdit.setIdPet(getIntent().getExtras().getString("idPet"));
-                myref.child("pets").child(getIntent().getExtras().getString("idPet")).setValue(petEdit);
-
-            }
-        });
+//        editar.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Pet petEdit = new Pet(mUser.getUid(), nomeTutor.getText().toString(), nome.getText().toString(), especie.getText().toString(), raca.getText().toString()
+//                        , peso.getText().toString(), nascimento.getText().toString());
+//                petEdit.setIdPet(getIntent().getExtras().getString("idPet"));
+//                myref.child("pets").child(getIntent().getExtras().getString("idPet")).setValue(petEdit);
+//
+//            }
+//        });
     }
 }
